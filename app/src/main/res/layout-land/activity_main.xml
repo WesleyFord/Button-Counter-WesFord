@@ -12,50 +12,51 @@
 
         <Button
             android:id="@+id/subtract_button"
-            android:layout_width="108dp"
-            android:layout_height="108dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="-"
+            android:layout_width="149dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/subBtn"
             android:textAlignment="center"
-            android:textSize="50sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/reset_button"
-            android:layout_width="108dp"
-            android:layout_height="108dp"
-            android:layout_marginBottom="16dp"
-            android:text="RESET"
+            android:layout_width="149dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/resetBtn"
             android:textAlignment="center"
-            android:textSize="22sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/add_button"
-            app:layout_constraintHorizontal_bias="0.486"
             app:layout_constraintStart_toEndOf="@+id/subtract_button" />
 
         <Button
             android:id="@+id/add_button"
-            android:layout_width="108dp"
-            android:layout_height="108dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="+"
+            android:layout_width="149dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/addBtn"
             android:textAlignment="center"
-            android:textSize="50sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/display"
-            android:layout_width="801dp"
-            android:layout_height="266dp"
+            android:layout_width="729dp"
+            android:layout_height="251dp"
             android:textAlignment="center"
             android:textSize="150sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.021" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

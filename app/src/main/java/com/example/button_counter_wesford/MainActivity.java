@@ -39,10 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         subtractButton = (Button) this.findViewById(R.id.subtract_button);
         resetButton = (Button) this.findViewById(R.id.reset_button);
 
-        addButton.setText("+");
-        resetButton.setText("Reset");
-        subtractButton.setText("-");
-
         addButton.setOnClickListener(this);
         subtractButton.setOnClickListener(this);
         resetButton.setOnClickListener(this);
@@ -54,7 +50,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    //Look into onStart, onResume, onPause, onStop, onRestart, and onDestroy methods and log stuff
+    //Save and restore info thanks to https://android.jlelse.eu/handling-orientation-changes-in-android-7072958c442a
+    @Override
+    protected void onSaveInstanceState(final Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("counter", counter);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(final Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        counter = savedInstanceState.getInt("counter");
+        display.setText(String.valueOf(counter));
+    }
 
     @Override
     public void onClick(View v) {
